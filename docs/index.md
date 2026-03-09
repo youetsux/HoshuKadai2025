@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-専門学校ゲームエンジニア科1年生向けのゲーム数学補習課題です。
+ゲームエンジニア科1年生向けのゲーム数学補習課題です。
 DxLibを使った砲台ゲームを作成しながら、ベクトル演算と放物線運動を学びます。
 
 ---
