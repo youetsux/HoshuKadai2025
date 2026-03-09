@@ -2,3 +2,10 @@ theme: jekyll-theme-cayman
 title: 砲台ゲーム補習課題
 description: 専門学校ゲーム数学 - ベクトルと放物線運動を学ぶ
 show_downloads: true
+
+# Markdown処理エンジンの設定
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge

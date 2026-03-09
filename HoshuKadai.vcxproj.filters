@@ -68,15 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README_CANNON_GAME.md" />
-    <None Include="IMPLEMENTATION_GUIDE.md" />
-    <None Include="WORKSHEET_01_Cannon_Problem.md" />
-    <None Include="WORKSHEET_01_Cannon_Answer.md" />
-    <None Include="WORKSHEET_02_Bullet_Problem.md" />
-    <None Include="WORKSHEET_02_Bullet_Answer.md" />
-    <None Include="WORKSHEET_03_Target_Problem.md" />
-    <None Include="WORKSHEET_03_Target_Answer.md" />
-    <None Include="WORKSHEET_04_Stage_Problem.md" />
-    <None Include="WORKSHEET_04_Stage_Answer.md" />
-    <None Include="TEMPLATE_README.md" />
+    <None Include="docs\_includes\head-custom.html" />
   </ItemGroup>
 </Project>
