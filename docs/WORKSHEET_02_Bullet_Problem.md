@@ -1,4 +1,4 @@
-﻿# ワークシート02: Bullet クラス（弾）- 穴埋め問題
+# ワークシート02: Bullet クラス（弾）- 穴埋め問題
 
 ## ?? このワークシートの目標
 
@@ -27,17 +27,17 @@
 
 物体の位置 \(\vec{p}\) と速度 \(\vec{v}\) の関係：
 
-$
+\[
 \vec{p}_{new} = \vec{p}_{old} + \vec{v}
-$
+\]
 
 成分で書くと：
-$
+\[
 \begin{aligned}
 x_{new} &= x_{old} + v_x \\
 y_{new} &= y_{old} + v_y
 \end{aligned}
-$
+\]
 
 **例題：**
 - 現在位置: (100, 100)
@@ -48,14 +48,14 @@ $
 
 加速度 \(\vec{a}\) による速度の変化：
 
-$
+\[
 \vec{v}_{new} = \vec{v}_{old} + \vec{a}
-$
+\]
 
 重力の場合、加速度は常に下向き（ワールド座標では負のy方向）：
-$
+\[
 \vec{g} = (0,\ -g)
-$
+\]
 
 **例題（重力 g = 0.3）：**
 - 現在の速度: \(v_y = +10\) (上向き)
@@ -149,14 +149,14 @@ Bullet::Bullet(const Vector2D& pos, const Vector2D& vel,
 ### 数式の確認
 
 **ステップ1: 速度の更新**
-$
+\[
 \vec{v}_{new} = \vec{v}_{old} + \vec{g}
-$
+\]
 
 **ステップ2: 位置の更新**
-$
+\[
 \vec{p}_{new} = \vec{p}_{old} + \vec{v}_{new}
-$
+\]
 
 ```cpp
 void Bullet::Update()
