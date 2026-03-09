@@ -1,10 +1,10 @@
-# ワークシート04: Stage クラス（当たり判定）- 解答
+﻿# ワークシート04: Stage クラス（当たり判定）- 解答
 
-## ?? 解答と解説
+## 📝 解答と解説
 
 ---
 
-## ?? 問題1の解答
+## ✅ 問題1の解答
 
 ```cpp
 void Stage::ShootBullet(Cannon* cannon)
@@ -63,7 +63,7 @@ void Stage::ShootBullet(Cannon* cannon)
 
 ---
 
-## ?? 問題2の解答
+## ✅ 問題2の解答
 
 ```cpp
 void Stage::Bullet_vs_Target()
