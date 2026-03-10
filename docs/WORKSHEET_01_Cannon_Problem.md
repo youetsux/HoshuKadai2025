@@ -28,7 +28,7 @@
 角度 $$ \theta $$ (ラジアン) から、長さ1の方向ベクトル \($\\vec{d}$\) を作る公式：
 
 $
-\vec{d} = \{ \cos(\theta), \sin(\theta) \}
+\vec{d} = \( \cos(\theta), \sin(\theta) \)
 $
 
 **例題：**
