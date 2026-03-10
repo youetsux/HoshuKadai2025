@@ -70,6 +70,5 @@
     <None Include="README_CANNON_GAME.md" />
     <None Include="docs\_includes\head-custom.html" />
     <None Include="docs\index.md" />
-    <None Include="docs\index_new.md" />
   </ItemGroup>
 </Project>
