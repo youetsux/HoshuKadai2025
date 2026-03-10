@@ -1,4 +1,4 @@
-# ワークシート03: Target クラス（的）- 穴埋め問題
+﻿# ワークシート03: Target クラス（的）- 穴埋め問題
 
 ## 🎯 このワークシートの目標
 
@@ -249,7 +249,7 @@ unsigned int drawColor = isHit_ ? GetColor(100, 100, 100) : Color_;
 
 ---
 
-## ? 完成チェックリスト
+## ✅ 完成チェックリスト
 
 実装が終わったら、以下を確認してください：
 
@@ -310,7 +310,7 @@ Target::Target(const Vector2D& pos, float radius, unsigned int color)
 
 ---
 
-## ?? 発展課題（余裕があれば）
+## 🚀 発展課題（余裕があれば）
 
 1. **的を動かす**
    ```cpp
