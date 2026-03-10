@@ -1,8 +1,8 @@
-﻿# 砲台ゲーム - ゲーム数学補習課題
+# 砲台ゲーム - ゲーム数学補習課題
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-専門学校ゲームエンジニア科1年生向けのゲーム数学補習課題です。
+GE1Aゲーム数学低点学生向けの補習課題です。
 DxLibを使った砲台ゲームを作成しながら、ベクトル演算と放物線運動を学びます。
 
 ---
@@ -79,11 +79,11 @@ DxLibを使った砲台ゲームを作成しながら、ベクトル演算と放
 - ベクトルの加算: $\vec{a} + \vec{b}$
 - ベクトルの減算: $\vec{a} - \vec{b}$
 - スカラー倍: $k \cdot \vec{v}$
-- ベクトルの長さ: $|\vec{v}| = \sqrt{v_x^2 + v_y^2}$
+- ベクトルの長さ: $|\vec{v}| = \sqrt{v\_x^2 + v\_y^2}$
 
 ### 物理シミュレーション
-- 等速運動: $\vec{p}_{\text{new}} = \vec{p}_{\text{old}} + \vec{v}$
-- 加速度運動: $\vec{v}_{\text{new}} = \vec{v}_{\text{old}} + \vec{a}$
+- 等速運動: $\vec{p}_{\text{new}} = \vec{p}\_{\text{old}} + \vec{v}$
+- 加速度運動: $\vec{v}\_{\text{new}} = \vec{v}\_{\text{old}} + \vec{a}$
 - 重力による放物線運動
 
 ### 当たり判定
@@ -202,6 +202,6 @@ DxLibのパスをプロジェクトに設定してください。
 
 ## 👨‍🏫 作成者
 
-専門学校 ゲーム数学担当教員
+ょぅぇっ＠ゲーム数学担当
 
-**最終更新**: 2025年1月
+**最終更新**: 2026年3月
