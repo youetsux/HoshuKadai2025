@@ -61,3 +61,14 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# 常に LF/UTF-8 想定のテキスト
+* text=auto eol=lf
+
+# 明示（任意）
+*.yml   text working-tree-encoding=UTF-8
+*.yaml  text working-tree-encoding=UTF-8
+*.md    text working-tree-encoding=UTF-8
+*.html  text working-tree-encoding=UTF-8
+*.css   text working-tree-encoding=UTF-8
+*.js    text working-tree-encoding=UTF-8
