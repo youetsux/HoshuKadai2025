@@ -25,39 +25,39 @@
 
 ### 1. 角度から方向ベクトルへの変換
 
-角度 θ (ラジアン) から、長さ1の方向ベクトル \(\vec{d}\) を作る公式：
+角度 $$\\theta$$ (ラジアン) から、長さ1の方向ベクトル \($\\vec{d}$\) を作る公式：
 
-\[
-\vec{d} = (\cos\theta,\ \sin\theta)
-\]
+$
+$\\vec{d}$ = ($\\cos$$\\theta$,\ $\\sin$$\\theta$)
+$
 
 **例題：**
-- θ = 0° (0 rad) → (cos 0, sin 0) = (1, 0) → 右向き
-- θ = 45° (π/4 rad) → (cos π/4, sin π/4) = (0.707, 0.707) → 右斜め上
-- θ = 90° (π/2 rad) → (cos π/2, sin π/2) = (0, 1) → 真上
+- $$\\theta$$ = 0° (0 rad) → ($$\\cos$$ 0, $$\\sin$$ 0) = (1, 0) → 右向き
+- $$\\theta$$ = 45° ($$\\pi$$/4 rad) → ($$\\cos$$ $$\\pi$$/4, $$\\sin$$ $$\\pi$$/4) = (0.707, 0.707) → 右斜め上
+- $$\\theta$$ = 90° ($$\\pi$$/2 rad) → ($$\\cos$$ $$\\pi$$/2, $$\\sin$$ $$\\pi$$/2) = (0, 1) → 真上
 
 ### 2. ベクトルのスカラー倍
 
-ベクトル \(\vec{v}\) に数値（スカラー）s を掛ける：
+ベクトル \($\\vec{v}$\) に数値（スカラー）s を掛ける：
 
-\[
-s \cdot \vec{v} = (s \cdot v_x,\ s \cdot v_y)
-\]
+$
+s \cdot $\\vec{v}$ = (s \cdot $v_{x}$,\ s \cdot $v_{y}$)
+$
 
 **例題：**
-- \(\vec{v} = (1, 0)\)、s = 50 のとき
+- \($\\vec{v}$ = (1, 0)\)、s = 50 のとき
 - \(50 \cdot (1, 0) = (50, 0)\)
 
 ### 3. ベクトルの加算
 
-2つのベクトル \(\vec{a}\) と \(\vec{b}\) を足す：
+2つのベクトル \($\\vec{a}$\) と \($\\vec{b}$\) を足す：
 
-\[
-\vec{a} + \vec{b} = (a_x + b_x,\ a_y + b_y)
-\]
+$
+$\\vec{a}$ + $\\vec{b}$ = (a_x + b_x,\ a_y + b_y)
+$
 
 **例題：**
-- \(\vec{a} = (100, 100)\)、\(\vec{b} = (50, 0)\) のとき
+- \($\\vec{a}$ = (100, 100)\)、\($\\vec{b}$ = (50, 0)\) のとき
 - \((100, 100) + (50, 0) = (150, 100)\)
 
 ---
@@ -121,13 +121,13 @@ Cannon::Cannon(const Vector2D& pos, unsigned int color)
 ```
 
 **ヒント：**
-- ③: 45°をラジアンで表すと？（`Math2D::PI` は π を表す）
+- ③: 45°をラジアンで表すと？（`Math2D::PI` は $$\\pi$$ を表す）
 - ④: 砲台を表すオブジェクトタイプ
 
 **数学メモ：**
-- 180° = π rad
-- 90° = π/2 rad
-- 45° = π/4 rad
+- 180° = $$\\pi$$ rad
+- 90° = $$\\pi$$/2 rad
+- 45° = $$\\pi$$/4 rad
 
 ---
 
@@ -136,9 +136,9 @@ Cannon::Cannon(const Vector2D& pos, unsigned int color)
 角度から方向ベクトルを計算する関数を完成させなさい。
 
 ### 数式の確認
-\[
-\vec{d} = (\cos\theta,\ \sin\theta)
-\]
+$
+$\\vec{d}$ = ($\\cos$$\\theta$,\ $\\sin$$\\theta$)
+$
 
 この計算は `Math2D::FromAngle()` 関数が行ってくれます。
 
@@ -161,12 +161,12 @@ Vector2D Cannon::GetDirection() const
 
 ### 数式の確認
 
-砲台の中心位置を \(\vec{p}\)、方向ベクトルを \(\vec{d}\)、砲身の長さを L とすると、
-砲身の先端位置 \(\vec{t}\) は：
+砲台の中心位置を \($\\vec{p}$\)、方向ベクトルを \($\\vec{d}$\)、砲身の長さを L とすると、
+砲身の先端位置 \($\\vec{t}$\) は：
 
-\[
-\vec{t} = \vec{p} + L \cdot \vec{d}
-\]
+$
+$\\vec{t}$ = $\\vec{p}$ + L \cdot $\\vec{d}$
+$
 
 **手順：**
 1. 方向ベクトルを取得する
@@ -210,7 +210,7 @@ Vector2D Cannon::GetTipPosition() const
 void Cannon::Update()
 {
     // 左キー: 角度を上げる
-    if (Input::IsKeepKeyDown(KEY_INPUT_LEFT))
+    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_LEFT))
     {
         angle_ += angleSpeed_;
         if (angle_ > Math2D::PI / 2.0f)
@@ -220,7 +220,7 @@ void Cannon::Update()
     }
     
     // 右キー: 角度を下げる
-    if (Input::IsKeepKeyDown(KEY_INPUT_RIGHT))
+    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_RIGHT))
     {
         angle_ -= angleSpeed_;
         if (angle_ < 0.0f)
@@ -230,7 +230,7 @@ void Cannon::Update()
     }
 
     // 上キー: 初速度を上げる
-    if (Input::IsKeepKeyDown(KEY_INPUT_UP))
+    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_UP))
     {
         bulletSpeed_ += bulletSpeedStep_;
         if (bulletSpeed_ > bulletSpeedMax_)
@@ -240,7 +240,7 @@ void Cannon::Update()
     }
 
     // 下キー: 初速度を下げる
-    if (Input::IsKeepKeyDown(KEY_INPUT_DOWN))
+    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_DOWN))
     {
         bulletSpeed_ -= bulletSpeedStep_;
         if (bulletSpeed_ < bulletSpeedMin_)
@@ -289,7 +289,7 @@ void Cannon::Draw()
 ### Q2: 砲身の先端位置の計算
 砲身の長さが 50 ピクセルで、角度が 45° のとき、
 砲台の中心が (100, 100) だとすると、砲身の先端位置はどこになりますか？
-（cos 45° = sin 45° = 0.707 として計算してください）
+（$$\\cos$$ 45° = $$\\sin$$ 45° = 0.707 として計算してください）
 
 ### Q3: ベクトル演算の利点
 もし Math2D の関数を使わずに、x と y を別々に計算する場合、

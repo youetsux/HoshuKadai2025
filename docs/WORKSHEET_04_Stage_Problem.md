@@ -28,41 +28,41 @@
 
 2つの円が衝突しているかを判定する条件：
 
-\[
+$
 \text{中心間の距離} \leq \text{半径の和}
-\]
+$
 
 ### 計算手順
 
 **ステップ1: 差ベクトルを求める**
 
-弾の位置 \(\vec{p_b}\) と 的の位置 \(\vec{p_t}\) の差：
+弾の位置 \($\\vec{p_b}$\) と 的の位置 \($\\vec{p_t}$\) の差：
 
-\[
-\vec{r} = \vec{p_b} - \vec{p_t}
-\]
+$
+$\\vec{r}$ = $\\vec{p_b}$ - $\\vec{p_t}$
+$
 
 成分で書くと：
-\[
-\vec{r} = (p_{bx} - p_{tx},\ p_{by} - p_{ty})
-\]
+$
+$\\vec{r}$ = ($p_{bx}$ - $p_{tx}$,\ $p_{by}$ - $p_{ty}$)
+$
 
 **ステップ2: 距離を求める**
 
 差ベクトルの長さが2点間の距離：
 
-\[
-d = |\vec{r}| = \sqrt{r_x^2 + r_y^2}
-\]
+$
+d = |$\\vec{r}$| = $\\sqrt{$r_{x}$^2 + $r_{y}$^2}$
+$
 
 **ステップ3: 判定**
 
-\[
-d \leq r_b + r_t \quad \Rightarrow \quad \text{衝突！}
-\]
+$
+d \leq $r_{b}$ + $r_{t}$ \quad \Rightarrow \quad \text{衝突！}
+$
 
-- \(r_b\): 弾の半径
-- \(r_t\): 的の半径
+- \($r_{b}$\): 弾の半径
+- \($r_{t}$\): 的の半径
 
 ---
 
@@ -77,24 +77,24 @@ d \leq r_b + r_t \quad \Rightarrow \quad \text{衝突！}
 **計算：**
 
 1. 差ベクトル:
-   \[
-   \vec{r} = (100, 100) - (108, 100) = (-8, 0)
-   \]
+   $
+   $\\vec{r}$ = (100, 100) - (108, 100) = (-8, 0)
+   $
 
 2. 距離:
-   \[
-   d = \sqrt{(-8)^2 + 0^2} = \sqrt{64} = 8
-   \]
+   $
+   d = $\\sqrt{(-8)^2 + 0^2}$ = $\\sqrt{64}$ = 8
+   $
 
 3. 半径の和:
-   \[
-   r_b + r_t = 5 + 10 = 15
-   \]
+   $
+   $r_{b}$ + $r_{t}$ = 5 + 10 = 15
+   $
 
 4. 判定:
-   \[
+   $
    8 \leq 15 \quad \Rightarrow \quad \text{衝突！}
-   \]
+   $
 
 ### 例2: 衝突していない場合
 
@@ -105,24 +105,24 @@ d \leq r_b + r_t \quad \Rightarrow \quad \text{衝突！}
 **計算：**
 
 1. 差ベクトル:
-   \[
-   \vec{r} = (100, 100) - (130, 100) = (-30, 0)
-   \]
+   $
+   $\\vec{r}$ = (100, 100) - (130, 100) = (-30, 0)
+   $
 
 2. 距離:
-   \[
-   d = \sqrt{(-30)^2 + 0^2} = 30
-   \]
+   $
+   d = $\\sqrt{(-30)^2 + 0^2}$ = 30
+   $
 
 3. 半径の和:
-   \[
-   r_b + r_t = 5 + 10 = 15
-   \]
+   $
+   $r_{b}$ + $r_{t}$ = 5 + 10 = 15
+   $
 
 4. 判定:
-   \[
+   $
    30 > 15 \quad \Rightarrow \quad \text{衝突していない}
-   \]
+   $
 
 ---
 
@@ -132,11 +132,11 @@ d \leq r_b + r_t \quad \Rightarrow \quad \text{衝突！}
 
 ### 数式の確認
 
-速度ベクトル \(\vec{v}\) は、方向ベクトル \(\vec{d}\) と速さ \(s\) から：
+速度ベクトル \($\\vec{v}$\) は、方向ベクトル \($\\vec{d}$\) と速さ \(s\) から：
 
-\[
-\vec{v} = s \cdot \vec{d}
-\]
+$
+$\\vec{v}$ = s \cdot $\\vec{d}$
+$
 
 ```cpp
 void Stage::ShootBullet(Cannon* cannon)
@@ -172,9 +172,9 @@ void Stage::ShootBullet(Cannon* cannon)
 
 ### 計算手順の復習
 
-1. 差ベクトル: \(\vec{r} = \vec{p_b} - \vec{p_t}\)
-2. 距離: \(d = |\vec{r}|\)
-3. 判定: \(d \leq r_b + r_t\)
+1. 差ベクトル: \($\\vec{r}$ = $\\vec{p_b}$ - $\\vec{p_t}$\)
+2. 距離: \(d = |$\\vec{r}$|\)
+3. 判定: \(d \leq $r_{b}$ + $r_{t}$\)
 
 ```cpp
 void Stage::Bullet_vs_Target()
@@ -298,7 +298,7 @@ void Stage::PlayUpdate()
     }
 
     // スペースキーが押されたら弾を発射
-    if (cannon != nullptr && Input::IsKeyDown(KEY_INPUT_SPACE))
+    if (cannon != nullptr && Input::IsKeyDown(KE$Y_{INPUT}$_SPACE))
     {
         ShootBullet(cannon);
     }
