@@ -356,3 +356,12 @@ void Cannon::Draw()
 
 このワークシートが完成したら、次は **WORKSHEET_02_Bullet_Problem.md** に進みましょう！
 弾クラスで放物線運動を実装します。
+
+---
+
+## 📚 ナビゲーション
+
+- [🏠 トップページに戻る](index.md)
+- [➡️ 次のワークシート: Bullet クラス（弾）](WORKSHEET_02_Bullet_Problem.md)
+
+---

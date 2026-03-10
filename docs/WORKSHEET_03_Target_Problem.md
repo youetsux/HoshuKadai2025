@@ -191,61 +191,16 @@ unsigned int drawColor = isHit_ ? GetColor(100, 100, 100) : Color_;
 ## 🎯 的の描画イメージ
 
 ### 通常時（当たっていない）
-```
-        ○○○○○     ← 外円（赤）
-      ○○    ○○
-    ○○  ○○  ○○   ← 中円（赤）
-    ○○  ○○  ○○
-      ○○    ○○
-        ○○○○○
 
-中心に小さい円     ← 内円（赤）
-```
+![通常時](InitialTarget.png "通常時")
+
+
 
 ### ヒット時（当たった後）
-```
-        ○○○○○     ← 外円（灰色）
-      ○○    ○○
-    ○○  ○○  ○○   ← 中円（灰色）
-    ○○  ○○  ○○
-      ○○    ○○
-        ○○○○○
 
-中心に小さい円     ← 内円（灰色）
-```
-
----
-
-## ✏ 解答欄
-
-以下に、完成したコードを記入してください。
-
-### Target.h
-```cpp
-// ここに完成した Target.h のコードを書く
+![Hit時](HitTarget.png "Hit時")
 
 
-
-
-
-
-
-
-```
-
-### Target.cpp
-```cpp
-// ここに完成した Target.cpp のコードを書く
-// （Draw() は提供済みなので、それ以外を記入）
-
-
-
-
-
-
-
-
-```
 
 ---
 
@@ -307,6 +262,14 @@ Target::Target(const Vector2D& pos, float radius, unsigned int color)
 - 円同士の衝突判定
 
 これで砲台ゲームが完成します！🎉
+
+---
+
+## 📚 ナビゲーション
+
+- [🏠 トップページに戻る](index.md)
+- [⬅️ 前のワークシート: Bullet クラス（弾）](WORKSHEET_02_Bullet_Problem.md)
+- [➡️ 次のワークシート: Stage クラス（当たり判定）](WORKSHEET_04_Stage_Problem.md)
 
 ---
 
