@@ -200,6 +200,7 @@ void Stage::Release()
 // ========================================
 void Stage::Bullet_vs_Target()
 {
+	// 有効な弾と的を集めるリスト
 	std::vector<Bullet*> activeBullets;
 	std::vector<Target*> targets;
 
@@ -209,17 +210,21 @@ void Stage::Bullet_vs_Target()
 	// オブジェクトリストから弾と的を抽出（提供済み）
 	for (auto& obj : objects)
 	{
+		// 弾の場合
 		if (obj->GetType() == OBJ_TYPE::BULLET)
 		{
 			Bullet* b = (Bullet*)obj;
+			// 有効な弾だけをリストに追加
 			if (b->IsActive())
 			{
 				activeBullets.push_back(b);
 			}
 		}
+		// 的の場合
 		else if (obj->GetType() == OBJ_TYPE::TARGET)
 		{
 			Target* t = (Target*)obj;
+			// まだ当たっていない的だけをリストに追加
 			if (!t->IsHit())
 			{
 				targets.push_back(t);
@@ -228,23 +233,39 @@ void Stage::Bullet_vs_Target()
 	}
 
 	// TODO: すべての弾と的の組み合わせで当たり判定
+	// 
 	// 二重ループで bullet と target をそれぞれ取り出す
+	// 外側ループ: for (auto& bullet : activeBullets)
+	// 内側ループ: for (auto& target : targets)
 	//
 	// 計算手順:
-	// 1. 差ベクトルを計算
-	//    Vector2D diff = Math2Dのベクトル減算関数(弾の位置, 的の位置);
+	// 
+	// ステップ1: 差ベクトルを計算（弾の位置 - 的の位置）
+	//   Vector2D diff = Math2Dのベクトル減算関数(弾の位置, 的の位置);
+	//   ヒント: 減算の関数名は「Sub」（Subtraction: 引き算）
+	//           弾の位置は bullet->GetPos()
+	//           的の位置は target->GetPos()
 	//
-	// 2. 距離を計算
-	//    float dist = Math2Dのベクトル長さ関数(差ベクトル);
+	// ステップ2: 距離を計算（ベクトルの長さ）
+	//   float dist = Math2Dのベクトル長さ関数(差ベクトル);
+	//   ヒント: 長さの関数名は「Length」
+	//           √(x² + y²) を計算する関数
 	//
-	// 3. 衝突判定距離を計算
-	//    float collisionDist = 弾の半径取得関数() + 的の半径取得関数();
+	// ステップ3: 衝突判定距離を計算（半径の和）
+	//   float collisionDist = bullet->半径取得関数() + target->半径取得関数();
+	//   ヒント: Bullet.h と Target.h で定義されている関数を使う
+	//           「Radius」を取得する関数
 	//
-	// 4. 判定: もし距離 < 衝突判定距離 なら当たり
-	//    当たったときの処理:
-	//      target->SetHit();      // 的を「当たった」状態にする
-	//      bullet->SetInactive(); // 弾を消す
-	//      isHit = true;          // HIT!を表示する
+	// ステップ4: 衝突判定
+	//   if (距離 <= 衝突判定距離)
+	//   {
+	//       // 当たったときの処理
+	//       target->SetHit();      // 的を「当たった」状態にする
+	//       bullet->SetInactive(); // 弾を消す
+	//       isHit = true;          // 「HIT!」を表示する
+	//       gameScore_ += 100;     // スコアを加算
+	//   }
+	//   ヒント: 距離 ≤ 半径の和 のとき、2つの円は重なっている（衝突）
 	
 	for (auto& bullet : activeBullets)
 	{
@@ -306,19 +327,29 @@ void Stage::DeleteInactiveBullet()
 // ========================================
 void Stage::ShootBullet(Cannon* cannon)
 {
+	// nullチェック: 砲台が存在しない場合は何もしない
 	if (cannon == nullptr) return;
 
 	// TODO: ここに実装を書く
+	// 
 	// ステップ1: 砲身の先端位置を取得
 	//   Vector2D pos = cannon->先端位置取得関数();
+	//   ヒント: Cannon.h で定義されている関数を使う
+	//           砲身の「Tip Position」を取得する関数
 	//
 	// ステップ2: 方向ベクトルを取得（単位ベクトル）
 	//   Vector2D dir = cannon->方向取得関数();
+	//   ヒント: Cannon.h で定義されている関数を使う
+	//           砲台が向いている「Direction」を取得する関数
 	//
-	// ステップ3: 速度ベクトルを計算
+	// ステップ3: 速度ベクトルを計算（方向ベクトル × 速さ）
 	//   Vector2D v = Math2Dのスカラー倍関数(方向ベクトル, cannon->速度取得関数());
+	//   ヒント: スカラー倍の関数名は「Mul」
+	//           速度を取得する関数は Cannon.h で定義されている「Speed」関連の関数
 	//
 	// ステップ4: 弾を生成してオブジェクトリストに追加
 	//   Bullet* b = new Bullet(位置, 速度, BULLET_COLOR, BULLET_RADIUS);
 	//   AddObject(b);
+	//   ヒント: BULLET_COLOR と BULLET_RADIUS は定数として定義済み
+	//           AddObject() 関数でオブジェクトリストに追加できる
 }
