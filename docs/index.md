@@ -51,15 +51,25 @@ DxLibを使った砲台ゲームを作成しながら、ベクトル演算と放
 
 ### 1. プロジェクトをダウンロード
 
-**方法A: ZIP ダウンロード**
-1. [GitHubリポジトリ](https://github.com/youetsux/HoshuKadai2025)にアクセス
-2. 「Code」→「Download ZIP」をクリック
-3. ZIPを解凍
+**方法A: Visual Studio 2022 でクローン（推奨）**
 
-**方法B: Git クローン**
-```bash
-git clone https://github.com/youetsux/HoshuKadai2025.git
-```
+1. Visual Studio 2022 を起動
+2. スタート画面で「リポジトリのクローン」をクリック
+3. 「リポジトリの場所」に以下のURLを入力：
+   ```
+   https://github.com/youetsux/HoshuKadai2025.git
+   ```
+4. 「パス」で保存先フォルダを選択（例: `C:\Users\your-name\source\repos\`）
+5. 「クローン」ボタンをクリック
+6. クローンが完了したら、自動的にプロジェクトが開きます
+
+**方法B: ZIP ダウンロード**
+
+1. [GitHubリポジトリ](https://github.com/youetsux/HoshuKadai2025)にアクセス
+2. 緑色の「Code」ボタンをクリック
+3. 「Download ZIP」を選択
+4. ダウンロードしたZIPファイルを解凍
+5. 解凍したフォルダ内の `HoshuKadai.sln` をダブルクリック
 
 ### 2. DxLib の設定
 
