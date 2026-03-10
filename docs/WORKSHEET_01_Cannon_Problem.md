@@ -181,7 +181,7 @@ Cannon::Cannon(const Vector2D& pos, unsigned int color)
 角度から方向ベクトルを計算する関数を完成させなさい。
 
 ### 数式の確認
-$ \vec{d} \= (\cos\theta,\ \sin\theta) $
+$ \vec{d} = (\cos\theta,\ \sin\theta) $
 
 この計算は `Math2D::FromAngle()` 関数が行ってくれます。
 
@@ -207,9 +207,7 @@ Vector2D Cannon::GetDirection() const
 砲台の中心位置を $$\\vec{p}$$、方向ベクトルを $$\\vec{d}$$、砲身の長さを L とすると、
 砲身の先端位置 $$\\vec{t}$$ は：
 
-$
-$\\vec{t}$ = $\\vec{p}$ + L \cdot $\\vec{d}$
-$
+$\vec{t} = \vec{p} + L \cdot \vec{d}$
 
 **手順：**
 1. 方向ベクトルを取得する
@@ -253,7 +251,7 @@ Vector2D Cannon::GetTipPosition() const
 void Cannon::Update()
 {
     // 左キー: 角度を上げる
-    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_LEFT))
+    if (Input::IsKeepKeyDown(KEY_INPUT_LEFT))
     {
         angle_ += angleSpeed_;
         if (angle_ > Math2D::PI / 2.0f)
@@ -263,7 +261,7 @@ void Cannon::Update()
     }
     
     // 右キー: 角度を下げる
-    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_RIGHT))
+    if (Input::IsKeepKeyDown(KEY_INPUT_RIGHT))
     {
         angle_ -= angleSpeed_;
         if (angle_ < 0.0f)
@@ -273,7 +271,7 @@ void Cannon::Update()
     }
 
     // 上キー: 初速度を上げる
-    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_UP))
+    if (Input::IsKeepKeyDown(KEY_INPUT_UP))
     {
         bulletSpeed_ += bulletSpeedStep_;
         if (bulletSpeed_ > bulletSpeedMax_)
@@ -283,7 +281,7 @@ void Cannon::Update()
     }
 
     // 下キー: 初速度を下げる
-    if (Input::IsKeepKeyDown(KE$Y_{INPUT}$_DOWN))
+    if (Input::IsKeepKeyDown(KEY_INPUT_DOWN))
     {
         bulletSpeed_ -= bulletSpeedStep_;
         if (bulletSpeed_ < bulletSpeedMin_)
@@ -337,39 +335,6 @@ void Cannon::Draw()
 ### Q3: ベクトル演算の利点
 もし Math2D の関数を使わずに、x と y を別々に計算する場合、
 コードはどうなりますか？ベクトル演算を使う利点は何ですか？
-
----
-
-## ✏ 解答欄
-
-以下に、完成したコードを記入してください。
-
-### Cannon.h
-```cpp
-// ここに完成した Cannon.h のコードを書く
-
-
-
-
-
-
-
-
-```
-
-### Cannon.cpp
-```cpp
-// ここに完成した Cannon.cpp のコードを書く
-// （Update() と Draw() は提供済みなので、それ以外を記入）
-
-
-
-
-
-
-
-
-```
 
 ---
 
